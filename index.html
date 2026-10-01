@@ -297,13 +297,13 @@ table thead th{position:sticky;top:0;z-index:2;background:var(--bg-2)}
         <div class="wiz on" data-wiz="1">
           <div class="grid g2">
             <div class="field"><label class="f">프로젝트명</label>
-              <input class="in" placeholder="예: 솔넥 CMS"></div>
+              <input class="in" placeholder="예: 브랜드 또는 서비스 이름"></div>
             <div class="field"><label class="f">업종</label>
               <select class="in"><option>IT·SaaS</option><option>의료·병원</option><option>제조</option><option>음악·엔터</option><option>교육</option></select></div>
           </div>
           <div class="field"><label class="f">사이트 주소</label>
             <div style="display:flex;gap:8px">
-              <input class="in" id="siteUrl" placeholder="https://" value="https://solnect.co.kr">
+              <input class="in" id="siteUrl" placeholder="https://example.co.kr" value="">
               <button class="btn ghost" style="white-space:nowrap" onclick="analyzeSite()">사이트 분석</button>
             </div>
             <div class="hint">사이트를 읽어 사업 요약·주요 서비스·키워드 초안을 만듭니다. 결과는 2단계에 자동으로 채워집니다.</div>
@@ -367,7 +367,7 @@ table thead th{position:sticky;top:0;z-index:2;background:var(--bg-2)}
               <div class="hint">선택한 톤이 모든 채널 변형에 공통 적용됩니다.</div>
             </div>
             <div class="field"><label class="f">타깃 독자</label>
-              <input class="in" value="병원 원무·마케팅 담당자, 개원 준비 원장"></div>
+              <input class="in" placeholder="예: 의사결정자, 실무 담당자"></div>
           </div>
           <div class="field"><label class="f">핵심 키워드 <span class="opt">— 주제 선정·중복 회피에 사용</span></label>
             <input class="in" value="병원 홈페이지, 의료광고 심의, 원내 콘텐츠 관리, 예약 전환"></div>
