@@ -1043,7 +1043,7 @@ function mediaHtml(assets, spec, c){
     const no = items.length > 1 ? `<span class="no">${i + 1} / ${items.length}</span>` : '';
     const body = a.url
       ? a.kind === 'video'
-        ? `<video src="${esc(a.url)}" controls playsinline preload="metadata"></video>`
+        ? `<video src="${esc(a.url)}${a.poster ? '' : '#t=0.1'}" ${a.poster ? `poster="${esc(a.poster)}"` : ''} controls playsinline preload="metadata"></video>`
         : `<img src="${esc(a.url)}" alt="컷 ${a.cut}" loading="lazy">`
       : a.kind === 'image' && textCard
         ? `<div class="ph text">${esc(c.core ?? c.topic)}</div>`
@@ -1590,7 +1590,7 @@ async function loadAll(){
 
   ASSETS = {};
   for (const a of assets){
-    (ASSETS[a.content_id] ??= []).push({ platform:a.platform, cut:a.cut_no, kind:a.kind, url:a.url });
+    (ASSETS[a.content_id] ??= []).push({ platform:a.platform, cut:a.cut_no, kind:a.kind, url:a.url, poster:a.poster_url });
   }
 
   APPS = {};
